@@ -1,6 +1,6 @@
-import 'package:DevQuiz/home/home_state.dart';
-import 'package:DevQuiz/shared/models/quiz_model.dart';
-import 'package:DevQuiz/shared/models/user_model.dart';
+import 'package:devquiz/home/home_state.dart';
+import 'package:devquiz/shared/models/quiz_model.dart';
+import 'package:devquiz/shared/models/user_model.dart';
 import 'package:flutter/widgets.dart';
 
 import 'home_repository.dart';

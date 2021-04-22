@@ -1,9 +1,8 @@
-import 'package:DevQuiz/challenge/widgets/quiz/quiz_widget.dart';
-import 'package:DevQuiz/core/core.dart';
-import 'package:DevQuiz/home/home_state.dart';
-import 'package:DevQuiz/home/widgets/appbar/app_bar_widget.dart';
-import 'package:DevQuiz/home/widgets/level_button/level_button_widget.dart';
-import 'package:DevQuiz/home/widgets/quiz_card/quiz_card_widget.dart';
+import 'package:devquiz/core/core.dart';
+import 'package:devquiz/home/home_state.dart';
+import 'package:devquiz/home/widgets/appbar/app_bar_widget.dart';
+import 'package:devquiz/home/widgets/level_button/level_button_widget.dart';
+import 'package:devquiz/home/widgets/quiz_card/quiz_card_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'home_controller.dart';
@@ -20,7 +19,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller.getUser();
     controller.getQuizzes();
