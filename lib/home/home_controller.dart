@@ -26,4 +26,10 @@ class HomeController {
     quizzes = await repository.getQuizzes();
     state = HomeState.success;
   }
+
+  void getQuizzesByLevel(Level level) async {
+    state = HomeState.loading;
+    quizzes = await repository.getQuizzesByLevel(level);
+    state = HomeState.success;
+  }
 }

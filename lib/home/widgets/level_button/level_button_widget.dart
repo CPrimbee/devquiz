@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class LevelButtonWidget extends StatelessWidget {
   final String label;
-  LevelButtonWidget({Key? key, required this.label})
+  final VoidCallback onTap;
+  LevelButtonWidget({Key? key, required this.label, required this.onTap})
       : assert(["Fácil", "Médio", "Difícil", "Perito"].contains(label)),
         super(key: key);
 
@@ -37,24 +38,27 @@ class LevelButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 32,
-      width: 80,
-      decoration: BoxDecoration(
-        color: color, //AppColors.levelButtonFacil,
-        border: Border.fromBorderSide(BorderSide(
-          color: borderColor, //AppColors.levelButtonBorderFacil,
-        )),
-        borderRadius: BorderRadius.circular(28),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 6),
-        child: Text(
-          label,
-          textAlign: TextAlign.center,
-          style: GoogleFonts.notoSans(
-            color: fontColor, //AppColors.levelButtonTextFacil,
-            fontSize: 13,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 32,
+        width: 80,
+        decoration: BoxDecoration(
+          color: color, //AppColors.levelButtonFacil,
+          border: Border.fromBorderSide(BorderSide(
+            color: borderColor, //AppColors.levelButtonBorderFacil,
+          )),
+          borderRadius: BorderRadius.circular(28),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 6),
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.notoSans(
+              color: fontColor, //AppColors.levelButtonTextFacil,
+              fontSize: 13,
+            ),
           ),
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:devquiz/home/home_state.dart';
 import 'package:devquiz/home/widgets/appbar/app_bar_widget.dart';
 import 'package:devquiz/home/widgets/level_button/level_button_widget.dart';
 import 'package:devquiz/home/widgets/quiz_card/quiz_card_widget.dart';
+import 'package:devquiz/shared/models/quiz_model.dart';
 import 'package:flutter/material.dart';
 
 import 'home_controller.dart';
@@ -47,15 +48,19 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   LevelButtonWidget(
                     label: "Fácil",
+                    onTap: () => {controller.getQuizzesByLevel(Level.facil)},
                   ),
                   LevelButtonWidget(
                     label: "Médio",
+                    onTap: () => {controller.getQuizzesByLevel(Level.medio)},
                   ),
                   LevelButtonWidget(
                     label: "Difícil",
+                    onTap: () => {controller.getQuizzesByLevel(Level.dificil)},
                   ),
                   LevelButtonWidget(
                     label: "Perito",
+                    onTap: () => {controller.getQuizzesByLevel(Level.perito)},
                   ),
                 ],
               ),
@@ -77,7 +82,10 @@ class _HomePageState extends State<HomePage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ChallengePage(questions: e.questions, title: e.title,)));
+                                      builder: (context) => ChallengePage(
+                                            questions: e.questions,
+                                            title: e.title,
+                                          )));
                             },
                           ))
                       .toList(),
