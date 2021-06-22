@@ -1,7 +1,23 @@
-import 'package:devquiz/core/app_colors.dart';
-import 'package:devquiz/core/app_text_styles.dart';
-import 'package:devquiz/home/widgets/chart/chart_widget.dart';
-import 'package:flutter/material.dart';
+import 'package:devquiz/core/app_colors.dart' show AppColors;
+import 'package:devquiz/core/app_text_styles.dart' show AppTextStyles;
+import 'package:devquiz/home/widgets/chart/chart_widget.dart' show ChartWidget;
+import 'package:flutter/material.dart'
+    show
+        BorderRadius,
+        BoxDecoration,
+        BuildContext,
+        Column,
+        Container,
+        CrossAxisAlignment,
+        EdgeInsets,
+        Expanded,
+        Key,
+        MainAxisAlignment,
+        Padding,
+        Row,
+        StatelessWidget,
+        Text,
+        Widget;
 
 class ScoreCardWidget extends StatelessWidget {
   final double percent;
@@ -24,7 +40,9 @@ class ScoreCardWidget extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: ChartWidget(percent: percent,),
+                child: ChartWidget(
+                  percent: percent,
+                ),
               ),
               Expanded(
                 flex: 3,
