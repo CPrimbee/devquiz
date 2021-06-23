@@ -10,9 +10,6 @@ void main() {
       ));
 
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
-
-      // await tester.pumpAndSettle();
-      // expect(find.byType(AppBarWidget), findsOneWidget);
     });
   });
 }
