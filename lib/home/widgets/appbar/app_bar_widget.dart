@@ -1,8 +1,25 @@
-import 'package:devquiz/core/app_gradients.dart';
-import 'package:devquiz/core/app_text_styles.dart';
-import 'package:devquiz/home/widgets/score_card/score_card_widget.dart';
-import 'package:devquiz/shared/models/user_model.dart';
-import 'package:flutter/material.dart';
+import 'package:devquiz/core/app_gradients.dart' show AppGradients;
+import 'package:devquiz/core/app_text_styles.dart' show AppTextStyles;
+import 'package:devquiz/home/widgets/score_card/score_card_widget.dart'
+    show ScoreCardWidget;
+import 'package:devquiz/shared/models/user_model.dart' show UserModel;
+import 'package:flutter/material.dart'
+    show
+        Align,
+        Alignment,
+        BorderRadius,
+        BoxDecoration,
+        Container,
+        DecorationImage,
+        EdgeInsets,
+        MainAxisAlignment,
+        NetworkImage,
+        PreferredSize,
+        Row,
+        Size,
+        Stack,
+        Text,
+        TextSpan;
 
 class AppBarWidget extends PreferredSize {
   final UserModel user;
@@ -45,7 +62,11 @@ class AppBarWidget extends PreferredSize {
                     ],
                   ),
                 ),
-                Align(alignment: Alignment(0.0, 1.0), child: ScoreCardWidget(percent: user.score/100,)),
+                Align(
+                    alignment: Alignment(0.0, 1.0),
+                    child: ScoreCardWidget(
+                      percent: user.score / 100,
+                    )),
               ],
             ),
           ),
